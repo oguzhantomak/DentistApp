@@ -45,20 +45,20 @@
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.label4 = new System.Windows.Forms.Label();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblMenuTarih = new System.Windows.Forms.Label();
             this.mpMenu.SuspendLayout();
             this.metroPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.metroPanel3.SuspendLayout();
             this.metroPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // mpMenu
@@ -100,6 +100,7 @@
             this.mtRandevuVer.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtRandevuVer.UseCustomBackColor = true;
             this.mtRandevuVer.UseSelectable = true;
+            this.mtRandevuVer.Click += new System.EventHandler(this.mtRandevuVer_Click);
             // 
             // mtYeniHastaKaydi
             // 
@@ -113,6 +114,7 @@
             this.mtYeniHastaKaydi.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtYeniHastaKaydi.UseCustomBackColor = true;
             this.mtYeniHastaKaydi.UseSelectable = true;
+            this.mtYeniHastaKaydi.Click += new System.EventHandler(this.mtYeniHastaKaydi_Click);
             // 
             // mtRandevular
             // 
@@ -126,6 +128,7 @@
             this.mtRandevular.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtRandevular.UseCustomBackColor = true;
             this.mtRandevular.UseSelectable = true;
+            this.mtRandevular.Click += new System.EventHandler(this.mtRandevular_Click);
             // 
             // metroTile5
             // 
@@ -151,6 +154,7 @@
             this.mtStok.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtStok.UseCustomBackColor = true;
             this.mtStok.UseSelectable = true;
+            this.mtStok.Click += new System.EventHandler(this.mtStok_Click);
             // 
             // metroTile4
             // 
@@ -176,6 +180,7 @@
             this.mtMaliDurum.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.mtMaliDurum.UseCustomBackColor = true;
             this.mtMaliDurum.UseSelectable = true;
+            this.mtMaliDurum.Click += new System.EventHandler(this.mtMaliDurum_Click);
             // 
             // metroTile3
             // 
@@ -243,71 +248,6 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // metroPanel3
-            // 
-            this.metroPanel3.BackColor = System.Drawing.Color.LightGray;
-            this.metroPanel3.Controls.Add(this.label1);
-            this.metroPanel3.HorizontalScrollbarBarColor = true;
-            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(207, 572);
-            this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(817, 45);
-            this.metroPanel3.TabIndex = 2;
-            this.metroPanel3.UseCustomBackColor = true;
-            this.metroPanel3.VerticalScrollbarBarColor = true;
-            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel4
-            // 
-            this.metroPanel4.BackColor = System.Drawing.Color.LightGray;
-            this.metroPanel4.Controls.Add(this.label5);
-            this.metroPanel4.Controls.Add(this.label4);
-            this.metroPanel4.Controls.Add(this.label3);
-            this.metroPanel4.Controls.Add(this.label2);
-            this.metroPanel4.HorizontalScrollbarBarColor = true;
-            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.HorizontalScrollbarSize = 10;
-            this.metroPanel4.Location = new System.Drawing.Point(207, 88);
-            this.metroPanel4.Name = "metroPanel4";
-            this.metroPanel4.Size = new System.Drawing.Size(817, 56);
-            this.metroPanel4.TabIndex = 3;
-            this.metroPanel4.UseCustomBackColor = true;
-            this.metroPanel4.VerticalScrollbarBarColor = true;
-            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.VerticalScrollbarSize = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.label1.Location = new System.Drawing.Point(21, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ödemesi Yaklaşanlar :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.label2.Location = new System.Drawing.Point(4, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Bugünkü Randevu Sayısı : ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.label3.Location = new System.Drawing.Point(19, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Kalan Randevu Sayısı : ";
-            // 
             // metroGrid1
             // 
             this.metroGrid1.AllowUserToResizeRows = false;
@@ -351,15 +291,50 @@
             this.metroGrid1.Size = new System.Drawing.Size(810, 408);
             this.metroGrid1.TabIndex = 2;
             // 
-            // label4
+            // metroPanel3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.label4.Location = new System.Drawing.Point(165, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.metroPanel3.BackColor = System.Drawing.Color.LightGray;
+            this.metroPanel3.Controls.Add(this.label1);
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(207, 572);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(817, 45);
+            this.metroPanel3.TabIndex = 2;
+            this.metroPanel3.UseCustomBackColor = true;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.label1.Location = new System.Drawing.Point(21, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Ödemesi Yaklaşanlar :";
+            // 
+            // metroPanel4
+            // 
+            this.metroPanel4.BackColor = System.Drawing.Color.LightGray;
+            this.metroPanel4.Controls.Add(this.label5);
+            this.metroPanel4.Controls.Add(this.label4);
+            this.metroPanel4.Controls.Add(this.label3);
+            this.metroPanel4.Controls.Add(this.label2);
+            this.metroPanel4.HorizontalScrollbarBarColor = true;
+            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.HorizontalScrollbarSize = 10;
+            this.metroPanel4.Location = new System.Drawing.Point(207, 88);
+            this.metroPanel4.Name = "metroPanel4";
+            this.metroPanel4.Size = new System.Drawing.Size(817, 56);
+            this.metroPanel4.TabIndex = 3;
+            this.metroPanel4.UseCustomBackColor = true;
+            this.metroPanel4.VerticalScrollbarBarColor = true;
+            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.VerticalScrollbarSize = 10;
             // 
             // label5
             // 
@@ -371,6 +346,36 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "label5";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.label4.Location = new System.Drawing.Point(165, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.label3.Location = new System.Drawing.Point(19, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Kalan Randevu Sayısı : ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.label2.Location = new System.Drawing.Point(4, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Bugünkü Randevu Sayısı : ";
+            // 
             // lblMenuTarih
             // 
             this.lblMenuTarih.AutoSize = true;
@@ -380,7 +385,7 @@
             this.lblMenuTarih.TabIndex = 4;
             this.lblMenuTarih.Text = "TARİH";
             // 
-            // Form1
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -392,17 +397,17 @@
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.mpMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Menu";
             this.Style = MetroFramework.MetroColorStyle.Lime;
             this.Text = "Menü - Dentist v1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mpMenu.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
