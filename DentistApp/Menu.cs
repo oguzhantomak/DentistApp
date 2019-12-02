@@ -59,5 +59,10 @@ namespace DentistApp
             Randevular RandevularPage = new Randevular();
             RandevularPage.ShowDialog();
         }
+
+        private void Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

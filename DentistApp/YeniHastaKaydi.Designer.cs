@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YeniHastaKaydi));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -37,17 +39,25 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnYeniHastaKaydet = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mskYeniHastaTcNo = new System.Windows.Forms.MaskedTextBox();
+            this.mskYeniHastaTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.txtYeniHastaSoyad = new System.Windows.Forms.TextBox();
+            this.txtYeniHastaAd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bosAdHata = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bosSoyadHata = new System.Windows.Forms.ErrorProvider(this.components);
+            this.bosTcHata = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tcNoEksikFazlaHata = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bosAdHata)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bosSoyadHata)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bosTcHata)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tcNoEksikFazlaHata)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -60,12 +70,12 @@
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnYeniHastaKaydet);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.maskedTextBox2);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.mskYeniHastaTcNo);
+            this.groupBox1.Controls.Add(this.mskYeniHastaTelefon);
+            this.groupBox1.Controls.Add(this.txtYeniHastaSoyad);
+            this.groupBox1.Controls.Add(this.txtYeniHastaAd);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -165,16 +175,17 @@
             this.comboBox1.Size = new System.Drawing.Size(48, 24);
             this.comboBox1.TabIndex = 2;
             // 
-            // button1
+            // btnYeniHastaKaydet
             // 
-            this.button1.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.button1.Location = new System.Drawing.Point(125, 425);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 52);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnYeniHastaKaydet.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.btnYeniHastaKaydet.Location = new System.Drawing.Point(125, 425);
+            this.btnYeniHastaKaydet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnYeniHastaKaydet.Name = "btnYeniHastaKaydet";
+            this.btnYeniHastaKaydet.Size = new System.Drawing.Size(212, 52);
+            this.btnYeniHastaKaydet.TabIndex = 10;
+            this.btnYeniHastaKaydet.Text = "Kaydet";
+            this.btnYeniHastaKaydet.UseVisualStyleBackColor = true;
+            this.btnYeniHastaKaydet.Click += new System.EventHandler(this.btnYeniHastaKaydet_Click);
             // 
             // label5
             // 
@@ -186,45 +197,49 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Doğum Tarihi: ";
             // 
-            // maskedTextBox2
+            // mskYeniHastaTcNo
             // 
-            this.maskedTextBox2.BeepOnError = true;
-            this.maskedTextBox2.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.maskedTextBox2.Location = new System.Drawing.Point(125, 204);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.maskedTextBox2.Mask = "___________";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(212, 23);
-            this.maskedTextBox2.TabIndex = 6;
+            this.mskYeniHastaTcNo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mskYeniHastaTcNo.BeepOnError = true;
+            this.mskYeniHastaTcNo.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.mskYeniHastaTcNo.Location = new System.Drawing.Point(125, 204);
+            this.mskYeniHastaTcNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mskYeniHastaTcNo.Mask = "00000000000";
+            this.mskYeniHastaTcNo.Name = "mskYeniHastaTcNo";
+            this.mskYeniHastaTcNo.ResetOnSpace = false;
+            this.mskYeniHastaTcNo.Size = new System.Drawing.Size(212, 23);
+            this.mskYeniHastaTcNo.TabIndex = 6;
             // 
-            // maskedTextBox1
+            // mskYeniHastaTelefon
             // 
-            this.maskedTextBox1.BeepOnError = true;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(125, 172);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.maskedTextBox1.Mask = "(000) 000 00 00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(212, 23);
-            this.maskedTextBox1.TabIndex = 5;
+            this.mskYeniHastaTelefon.BeepOnError = true;
+            this.mskYeniHastaTelefon.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.mskYeniHastaTelefon.Location = new System.Drawing.Point(125, 172);
+            this.mskYeniHastaTelefon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mskYeniHastaTelefon.Mask = "(000) 000 00 00";
+            this.mskYeniHastaTelefon.Name = "mskYeniHastaTelefon";
+            this.mskYeniHastaTelefon.Size = new System.Drawing.Size(212, 23);
+            this.mskYeniHastaTelefon.TabIndex = 5;
             // 
-            // textBox2
+            // txtYeniHastaSoyad
             // 
-            this.textBox2.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.textBox2.Location = new System.Drawing.Point(125, 107);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 23);
-            this.textBox2.TabIndex = 1;
+            this.txtYeniHastaSoyad.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.txtYeniHastaSoyad.Location = new System.Drawing.Point(125, 107);
+            this.txtYeniHastaSoyad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtYeniHastaSoyad.Name = "txtYeniHastaSoyad";
+            this.txtYeniHastaSoyad.Size = new System.Drawing.Size(212, 23);
+            this.txtYeniHastaSoyad.TabIndex = 1;
             // 
-            // textBox1
+            // txtYeniHastaAd
             // 
-            this.textBox1.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.textBox1.Location = new System.Drawing.Point(125, 75);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 23);
-            this.textBox1.TabIndex = 0;
+            this.txtYeniHastaAd.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.txtYeniHastaAd.Location = new System.Drawing.Point(125, 75);
+            this.txtYeniHastaAd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtYeniHastaAd.Name = "txtYeniHastaAd";
+            this.txtYeniHastaAd.Size = new System.Drawing.Size(212, 23);
+            this.txtYeniHastaAd.TabIndex = 0;
             // 
             // label4
             // 
@@ -266,6 +281,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ad: ";
             // 
+            // bosAdHata
+            // 
+            this.bosAdHata.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
+            this.bosAdHata.ContainerControl = this;
+            this.bosAdHata.Icon = ((System.Drawing.Icon)(resources.GetObject("bosAdHata.Icon")));
+            // 
+            // bosSoyadHata
+            // 
+            this.bosSoyadHata.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
+            this.bosSoyadHata.ContainerControl = this;
+            this.bosSoyadHata.Icon = ((System.Drawing.Icon)(resources.GetObject("bosSoyadHata.Icon")));
+            // 
+            // bosTcHata
+            // 
+            this.bosTcHata.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
+            this.bosTcHata.ContainerControl = this;
+            this.bosTcHata.Icon = ((System.Drawing.Icon)(resources.GetObject("bosTcHata.Icon")));
+            // 
+            // tcNoEksikFazlaHata
+            // 
+            this.tcNoEksikFazlaHata.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.AlwaysBlink;
+            this.tcNoEksikFazlaHata.ContainerControl = this;
+            this.tcNoEksikFazlaHata.Icon = ((System.Drawing.Icon)(resources.GetObject("tcNoEksikFazlaHata.Icon")));
+            // 
             // YeniHastaKaydi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +316,10 @@
             this.Text = "Yeni Hasta Kaydı";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bosAdHata)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bosSoyadHata)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bosTcHata)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tcNoEksikFazlaHata)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -292,15 +335,19 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnYeniHastaKaydet;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox mskYeniHastaTcNo;
+        private System.Windows.Forms.MaskedTextBox mskYeniHastaTelefon;
+        private System.Windows.Forms.TextBox txtYeniHastaSoyad;
+        private System.Windows.Forms.TextBox txtYeniHastaAd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ErrorProvider bosAdHata;
+        public System.Windows.Forms.ErrorProvider bosSoyadHata;
+        public System.Windows.Forms.ErrorProvider bosTcHata;
+        public System.Windows.Forms.ErrorProvider tcNoEksikFazlaHata;
     }
 }

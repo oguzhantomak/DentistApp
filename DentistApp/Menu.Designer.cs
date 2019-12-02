@@ -400,6 +400,7 @@
             this.Name = "Menu";
             this.Style = MetroFramework.MetroColorStyle.Lime;
             this.Text = "Menü - Dentist v1.0";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mpMenu.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
