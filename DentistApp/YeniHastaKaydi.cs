@@ -46,8 +46,8 @@ namespace DentistApp
 
             //**********************************************                   DÜZELTİLECEK 1                   **********************************************                                                     T.C.'no eksik girildiğinde uyarı kalkabiliyor ve daha önce bir kez verilen hata düzeltilip başka bir hata alınmaya çalışıldığında o hatanın error iconu gösterilmiyor.
 
-            else if (mskYeniHastaTcNo.Text.Length != 11)
-                tcNoEksikFazlaHata.SetError(mskYeniHastaTcNo, "T.C. Kimlik 11 karakter olmalıdır.");
+            //else if (mskYeniHastaTcNo.Text.Length != 11)
+            //    tcNoEksikFazlaHata.SetError(mskYeniHastaTcNo, "T.C. Kimlik 11 karakter olmalıdır.");
 
             else
                 bosTcHata.Clear();

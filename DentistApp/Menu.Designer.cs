@@ -399,7 +399,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.Style = MetroFramework.MetroColorStyle.Lime;
-            this.Text = "Menü - Dentist v1.0";
+            this.Text = "Menü - Dentixt v1.0";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mpMenu.ResumeLayout(false);
