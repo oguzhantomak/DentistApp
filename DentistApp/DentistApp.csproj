@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\MyContext.cs" />
+    <Compile Include="DentistServices.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>

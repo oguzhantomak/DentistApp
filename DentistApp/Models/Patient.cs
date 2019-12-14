@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,14 @@ namespace DentistApp.Models
     public class Patient
     {
         public int PatientId { get; set; }
+        [MaxLength(11)]
+        [Required]
         public string TcNo { get; set; }
+        [MaxLength(50)]
+        [Required]
         public string Ad { get; set; }
+        [MaxLength(50)]
+        [Required]
         public string Soyad { get; set; }
 
         public DateTime DogumTarihi { get; set; }
@@ -38,16 +45,16 @@ namespace DentistApp.Models
         // #######################          #######################          #######################          #######################          
         //public int NoteId { get; set; }
         //public virtual Note Note { get; set; } GÜNCELLENMİŞ HALİ ALTTAKİDİR. 1-N İLİŞKİ
-        public virtual List<Note> Notes { get; set; }
+        public virtual ICollection<Note> Notes { get; set; }
 
         // #######################          #######################          #######################          #######################          
-        public virtual List<Debt> Debts { get; set; }
+        public virtual ICollection<Debt> Debts { get; set; }
 
         // #######################          #######################          #######################          #######################          
-        public virtual List<Treatment> Treatments { get; set; }
+        public virtual ICollection<Treatment> Treatments { get; set; }
 
         // #######################          #######################          #######################          #######################          
-        public virtual List<Appoitment> Appoitments { get; set; }
+        public virtual ICollection<Appoitment> Appoitments { get; set; }
 
     }
 }
