@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YeniHastaKaydi));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
             this.dtYeniHastaDogumTarihi = new MetroFramework.Controls.MetroDateTime();
             this.mcYeniHastaKanGrubu = new MetroFramework.Controls.MetroComboBox();
             this.txtYeniHastaKayitNotlar = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.mskYeniHastaTcNo = new System.Windows.Forms.MaskedTextBox();
@@ -55,13 +56,12 @@
             this.bosSoyadHata = new System.Windows.Forms.ErrorProvider(this.components);
             this.bosTcHata = new System.Windows.Forms.ErrorProvider(this.components);
             this.tcNoEksikFazlaHata = new System.Windows.Forms.ErrorProvider(this.components);
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.groupBox1.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bosAdHata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bosSoyadHata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bosTcHata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tcNoEksikFazlaHata)).BeginInit();
-            this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,20 +92,72 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hasta Kişisel Bilgileri";
             // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Controls.Add(this.radioButton1);
+            this.metroPanel1.Controls.Add(this.radioButton2);
+            this.metroPanel1.Controls.Add(this.label10);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(437, 79);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(337, 53);
+            this.metroPanel1.TabIndex = 21;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.radioButton1.Location = new System.Drawing.Point(262, 16);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(68, 24);
+            this.radioButton1.TabIndex = 15;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Erkek";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.radioButton2.Location = new System.Drawing.Point(138, 16);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(69, 24);
+            this.radioButton2.TabIndex = 14;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Kadın";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Aliquam", 10F);
+            this.label10.Location = new System.Drawing.Point(40, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 20);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Cinsiyet: ";
+            // 
             // dtYeniHastaDogumTarihi
             // 
             this.dtYeniHastaDogumTarihi.Location = new System.Drawing.Point(146, 167);
             this.dtYeniHastaDogumTarihi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dtYeniHastaDogumTarihi.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtYeniHastaDogumTarihi.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtYeniHastaDogumTarihi.Name = "dtYeniHastaDogumTarihi";
-            this.dtYeniHastaDogumTarihi.Size = new System.Drawing.Size(247, 29);
+            this.dtYeniHastaDogumTarihi.Size = new System.Drawing.Size(247, 30);
             this.dtYeniHastaDogumTarihi.TabIndex = 2;
             this.dtYeniHastaDogumTarihi.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             // 
             // mcYeniHastaKanGrubu
             // 
             this.mcYeniHastaKanGrubu.FormattingEnabled = true;
-            this.mcYeniHastaKanGrubu.ItemHeight = 23;
+            this.mcYeniHastaKanGrubu.ItemHeight = 24;
             this.mcYeniHastaKanGrubu.Items.AddRange(new object[] {
             "Arh+",
             "Arh-",
@@ -118,7 +170,7 @@
             this.mcYeniHastaKanGrubu.Location = new System.Drawing.Point(575, 134);
             this.mcYeniHastaKanGrubu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mcYeniHastaKanGrubu.Name = "mcYeniHastaKanGrubu";
-            this.mcYeniHastaKanGrubu.Size = new System.Drawing.Size(189, 29);
+            this.mcYeniHastaKanGrubu.Size = new System.Drawing.Size(189, 30);
             this.mcYeniHastaKanGrubu.TabIndex = 19;
             this.mcYeniHastaKanGrubu.UseSelectable = true;
             // 
@@ -138,45 +190,9 @@
             this.label9.Font = new System.Drawing.Font("Aliquam", 10F);
             this.label9.Location = new System.Drawing.Point(487, 183);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 17);
+            this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 18;
             this.label9.Text = "Notlar: ";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.radioButton1.Location = new System.Drawing.Point(262, 16);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(57, 21);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Erkek";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.radioButton2.Location = new System.Drawing.Point(138, 16);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(60, 21);
-            this.radioButton2.TabIndex = 14;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Kadın";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Aliquam", 10F);
-            this.label10.Location = new System.Drawing.Point(40, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 17);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Cinsiyet: ";
             // 
             // label11
             // 
@@ -184,7 +200,7 @@
             this.label11.Font = new System.Drawing.Font("Aliquam", 10F);
             this.label11.Location = new System.Drawing.Point(461, 146);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 17);
+            this.label11.Size = new System.Drawing.Size(82, 20);
             this.label11.TabIndex = 13;
             this.label11.Text = "Kan Grubu:";
             // 
@@ -194,7 +210,7 @@
             this.label5.Font = new System.Drawing.Font("Aliquam", 10F);
             this.label5.Location = new System.Drawing.Point(13, 175);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 17);
+            this.label5.Size = new System.Drawing.Size(100, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Doğum Tarihi: ";
             // 
@@ -210,7 +226,7 @@
             this.mskYeniHastaTcNo.Mask = "00000000000";
             this.mskYeniHastaTcNo.Name = "mskYeniHastaTcNo";
             this.mskYeniHastaTcNo.ResetOnSpace = false;
-            this.mskYeniHastaTcNo.Size = new System.Drawing.Size(183, 23);
+            this.mskYeniHastaTcNo.Size = new System.Drawing.Size(183, 27);
             this.mskYeniHastaTcNo.TabIndex = 4;
             // 
             // mskYeniHastaTelefon
@@ -221,7 +237,7 @@
             this.mskYeniHastaTelefon.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.mskYeniHastaTelefon.Mask = "(000) 000 00 00";
             this.mskYeniHastaTelefon.Name = "mskYeniHastaTelefon";
-            this.mskYeniHastaTelefon.Size = new System.Drawing.Size(247, 23);
+            this.mskYeniHastaTelefon.Size = new System.Drawing.Size(247, 27);
             this.mskYeniHastaTelefon.TabIndex = 3;
             // 
             // txtYeniHastaSoyad
@@ -230,7 +246,7 @@
             this.txtYeniHastaSoyad.Location = new System.Drawing.Point(146, 132);
             this.txtYeniHastaSoyad.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtYeniHastaSoyad.Name = "txtYeniHastaSoyad";
-            this.txtYeniHastaSoyad.Size = new System.Drawing.Size(247, 23);
+            this.txtYeniHastaSoyad.Size = new System.Drawing.Size(247, 27);
             this.txtYeniHastaSoyad.TabIndex = 1;
             // 
             // txtYeniHastaEmail
@@ -239,7 +255,7 @@
             this.txtYeniHastaEmail.Location = new System.Drawing.Point(146, 289);
             this.txtYeniHastaEmail.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtYeniHastaEmail.Name = "txtYeniHastaEmail";
-            this.txtYeniHastaEmail.Size = new System.Drawing.Size(247, 23);
+            this.txtYeniHastaEmail.Size = new System.Drawing.Size(247, 27);
             this.txtYeniHastaEmail.TabIndex = 5;
             // 
             // txtYeniHastaAd
@@ -248,7 +264,7 @@
             this.txtYeniHastaAd.Location = new System.Drawing.Point(146, 92);
             this.txtYeniHastaAd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtYeniHastaAd.Name = "txtYeniHastaAd";
-            this.txtYeniHastaAd.Size = new System.Drawing.Size(247, 23);
+            this.txtYeniHastaAd.Size = new System.Drawing.Size(247, 27);
             this.txtYeniHastaAd.TabIndex = 0;
             // 
             // label4
@@ -257,7 +273,7 @@
             this.label4.Font = new System.Drawing.Font("Aliquam", 10F);
             this.label4.Location = new System.Drawing.Point(13, 253);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 17);
+            this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "T.C. Kimlik No: ";
             // 
@@ -267,7 +283,7 @@
             this.label3.Font = new System.Drawing.Font("Aliquam", 10F);
             this.label3.Location = new System.Drawing.Point(46, 214);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 17);
+            this.label3.Size = new System.Drawing.Size(64, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Telefon: ";
             // 
@@ -277,7 +293,7 @@
             this.label2.Font = new System.Drawing.Font("Aliquam", 10F);
             this.label2.Location = new System.Drawing.Point(52, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(58, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Soyad: ";
             // 
@@ -287,7 +303,7 @@
             this.label8.Font = new System.Drawing.Font("Aliquam", 10F);
             this.label8.Location = new System.Drawing.Point(63, 292);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 17);
+            this.label8.Size = new System.Drawing.Size(46, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "Email:";
             // 
@@ -297,7 +313,7 @@
             this.label1.Font = new System.Drawing.Font("Aliquam", 10F);
             this.label1.Location = new System.Drawing.Point(73, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 17);
+            this.label1.Size = new System.Drawing.Size(33, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ad: ";
             // 
@@ -337,25 +353,9 @@
             this.tcNoEksikFazlaHata.ContainerControl = this;
             this.tcNoEksikFazlaHata.Icon = ((System.Drawing.Icon)(resources.GetObject("tcNoEksikFazlaHata.Icon")));
             // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Controls.Add(this.radioButton1);
-            this.metroPanel1.Controls.Add(this.radioButton2);
-            this.metroPanel1.Controls.Add(this.label10);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(437, 79);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(337, 53);
-            this.metroPanel1.TabIndex = 21;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
             // YeniHastaKaydi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 500);
             this.Controls.Add(this.groupBox1);
@@ -368,12 +368,12 @@
             this.Text = "Yeni Hasta Kaydı";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.metroPanel1.ResumeLayout(false);
+            this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bosAdHata)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bosSoyadHata)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bosTcHata)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tcNoEksikFazlaHata)).EndInit();
-            this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

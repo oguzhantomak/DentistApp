@@ -60,6 +60,9 @@ namespace DentistApp
                #endregion
 
        */
+            //BloodType bt = new BloodType();
+            //bt.BloodTypeId = 1;
+            //bt.BloodTypeName = mcYeniHastaKanGrubu.Text;
 
             Patient patient = new Patient();
             patient.Ad = txtYeniHastaAd.Text;
@@ -71,6 +74,12 @@ namespace DentistApp
             //Gender gelecek
 
             patient.GenderId = 1;
+            patient.CreationDate = DateTime.Now;
+            patient.BloodTypeId = 1;
+            
+
+            //patient.BloodTypeId = 1;
+            
 
             //foreach (Control item in metroPanel1.Controls)
             //{

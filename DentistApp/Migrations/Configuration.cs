@@ -27,6 +27,38 @@ namespace DentistApp.Migrations
             //    );
             //
 
+            context.BloodTypes.AddOrUpdate(x => x.BloodTypeId,
+                new Models.BloodType()
+                {
+                    BloodTypeId = 1,
+                    BloodTypeName = "A+"
+                },
+                new Models.BloodType()
+                {
+                    BloodTypeId = 2,
+                    BloodTypeName = "A-"
+                }, new Models.BloodType()
+                {
+                    BloodTypeId = 3,
+                    BloodTypeName = "0+"
+                }, new Models.BloodType()
+                {
+                    BloodTypeId = 4,
+                    BloodTypeName = "0-"
+                });
+
+            context.Genders.AddOrUpdate(x => x.GenderId,
+                new Models.Gender()
+                {
+                    GenderId = 1,
+                    GenderType = "Erkek"
+                },
+                new Models.Gender()
+                {
+                    GenderId = 2,
+                    GenderType = "Kadýn"
+                });
+
         }
     }
 }
