@@ -26,9 +26,20 @@ namespace DentistApp
         //bağlantı cümlemizi kullanarak bir SqlConnection bağlantısı oluşturuyoruz.
         private void Hastalar_Load(object sender, EventArgs e)
         {
+
+            //*********** YAPILACAKLAR ***********//
+            //Altta yer alan işlemler global bir alanda metoda alınacak
+
             baglanti.Open();
             string kayit = "SELECT * from Patients";
             //musteriler tablosundaki tüm kayıtları çekecek olan sql sorgusu.
+
+
+            //*********** YAPILACAKLAR ***********//
+            // Select kaydı düzenlenicek. Sadece çekmek istediğim hasta bilgilerini getireceğim. Gelen tablolaların isim bilgilerini düzelteceğim. Örnek Hasta Adı şeklinde tablo ismi olacak.
+
+
+            
             SqlCommand komut = new SqlCommand(kayit, baglanti);
             //Sorgumuzu ve baglantimizi parametre olarak alan bir SqlCommand nesnesi oluşturuyoruz.
             SqlDataAdapter da = new SqlDataAdapter(komut);
@@ -39,6 +50,17 @@ namespace DentistApp
             hastalarGrid.DataSource = dt;
             //Formumuzdaki DataGridViewin veri kaynağını oluşturduğumuz tablo olarak gösteriyoruz.
             baglanti.Close();
+        }
+
+        void GetList()
+        {
+            hastalarGrid.DataSource = null;
+
+        }
+
+        private void txtHastaAra_TextChanged(object sender, EventArgs e)
+        {
+            GetList();
         }
     }
 }
