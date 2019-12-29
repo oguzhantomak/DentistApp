@@ -60,9 +60,6 @@ namespace DentistApp
                #endregion
 
        */
-            //BloodType bt = new BloodType();
-            //bt.BloodTypeId = 1;
-            //bt.BloodTypeName = mcYeniHastaKanGrubu.Text;
 
             Patient patient = new Patient();
             patient.Ad = txtYeniHastaAd.Text;
@@ -71,14 +68,10 @@ namespace DentistApp
             patient.PatientMobilePhone = mskYeniHastaTelefon.Text;
             patient.TcNo = mskYeniHastaTcNo.Text;
             patient.PatientEmail = txtYeniHastaEmail.Text;
-            //Gender gelecek
 
-            patient.GenderId = 1;
+            patient.GenderId = 1; ///////////////////// Gender radio buttondan gelecek
             patient.CreationDate = DateTime.Now;
-            patient.BloodTypeId = 1;
-            
-
-            //patient.BloodTypeId = 1;
+            patient.BloodTypeId = 1;  ////////////      Bloodtype comboboxtan gelecek
             
 
             //foreach (Control item in metroPanel1.Controls)
@@ -93,11 +86,9 @@ namespace DentistApp
             //    }
             //}
 
-            //patient.BloodType.BloodTypeName = (string)mcYeniHastaKanGrubu.SelectedItem;
 
 
             // ###########################################################################################
-            //patient.BloodType = (BloodType)mcYeniHastaKanGrubu.SelectedItem;
             //patient.Notes = txtYeniHastaKayitNotlar.Text;   // Düzeltilecek
 
             bool result = ds.Add(patient);

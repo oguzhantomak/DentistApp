@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DentixtDbDataSet" targetNamespace="http://tempuri.org/DentixtDbDataSet.xsd" xmlns:mstns="http://tempuri.org/DentixtDbDataSet.xsd" xmlns="http://tempuri.org/DentixtDbDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DentixtDbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DentixtDbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DentistApp.Properties.Settings.GlobalReference.Default.DentixtDbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PatientsTableAdapter" GeneratorDataComponentClassName="PatientsTableAdapter" Name="Patients" UserDataComponentName="PatientsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DentixtDbConnectionString (Settings)" DbObjectName="DentixtDb.dbo.Patients" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Ad, Soyad, DogumTarihi, PatientMobilePhone FROM dbo.Patients</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ad" DataSetColumn="Ad" />
+              <Mapping SourceColumn="Soyad" DataSetColumn="Soyad" />
+              <Mapping SourceColumn="DogumTarihi" DataSetColumn="DogumTarihi" />
+              <Mapping SourceColumn="PatientMobilePhone" DataSetColumn="PatientMobilePhone" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DentixtDbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DentixtDbDataSet" msprop:Generator_UserDSName="DentixtDbDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Patients" msprop:Generator_TableClassName="PatientsDataTable" msprop:Generator_TableVarName="tablePatients" msprop:Generator_TablePropName="Patients" msprop:Generator_RowDeletingName="PatientsRowDeleting" msprop:Generator_RowChangingName="PatientsRowChanging" msprop:Generator_RowEvHandlerName="PatientsRowChangeEventHandler" msprop:Generator_RowDeletedName="PatientsRowDeleted" msprop:Generator_UserTableName="Patients" msprop:Generator_RowChangedName="PatientsRowChanged" msprop:Generator_RowEvArgName="PatientsRowChangeEvent" msprop:Generator_RowClassName="PatientsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ad" msprop:Generator_ColumnVarNameInTable="columnAd" msprop:Generator_ColumnPropNameInRow="Ad" msprop:Generator_ColumnPropNameInTable="AdColumn" msprop:Generator_UserColumnName="Ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Soyad" msprop:Generator_ColumnVarNameInTable="columnSoyad" msprop:Generator_ColumnPropNameInRow="Soyad" msprop:Generator_ColumnPropNameInTable="SoyadColumn" msprop:Generator_UserColumnName="Soyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DogumTarihi" msprop:Generator_ColumnVarNameInTable="columnDogumTarihi" msprop:Generator_ColumnPropNameInRow="DogumTarihi" msprop:Generator_ColumnPropNameInTable="DogumTarihiColumn" msprop:Generator_UserColumnName="DogumTarihi" type="xs:dateTime" />
+              <xs:element name="PatientMobilePhone" msprop:Generator_ColumnVarNameInTable="columnPatientMobilePhone" msprop:Generator_ColumnPropNameInRow="PatientMobilePhone" msprop:Generator_ColumnPropNameInTable="PatientMobilePhoneColumn" msprop:Generator_UserColumnName="PatientMobilePhone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

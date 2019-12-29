@@ -21,7 +21,11 @@ namespace DentistApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dentixtDbDataSet.Patients' table. You can move, or remove it, as needed.
+            this.patientsTableAdapter.Fill(this.dentixtDbDataSet.Patients);
             lblMenuTarih.Text = DateTime.Now.ToLongDateString();
+            //menuPatientGrid.DataSource=
+                //dgvEmployees.DataSource = Form1.personeller.ToList().Select(x => new { x.Id,x.PersonelName, x.PersonelLastName, x.PersonelMail, x.PersonelPhone }).ToList();
         }
 
         private void mtHastalar_Click(object sender, EventArgs e)
