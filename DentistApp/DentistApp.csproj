@@ -52,6 +52,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -129,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="Hastalar.resx">
       <DependentUpon>Hastalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaliDurum.resx">
+      <DependentUpon>MaliDurum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
