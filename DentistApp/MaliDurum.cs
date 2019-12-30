@@ -12,6 +12,7 @@ using MetroFramework.Forms;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using DentistApp.Context;
 
 namespace DentistApp
 {
@@ -24,7 +25,8 @@ namespace DentistApp
 
         void GetList(string param)
         {
-            mlvHastalarMaliDurum.Items.Clear();
+            #region İptal Edilen Yöntem
+            //mlvHastalarMaliDurum.Items.Clear();
 
             //string mainconn = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
             //SqlConnection sqlconn = new SqlConnection(mainconn);
@@ -37,28 +39,71 @@ namespace DentistApp
             // 1- Listviewda sadece isim çıkıyor, aradığım özelliklerin tamamı gözükmüyor o düzeltilecek.
             // 2- Sorgu daha düzgün bir şekilde yazılacak
             // 3- Contains metodu içeren sorgu yazılacak. Şu an sadece Ad sütunundaki değerin 1e1 eşleşmesi ile gösteriyor
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-RPPH3THU\\SQLEXPRESS;Initial Catalog=DentixtDb;Integrated Security=True");
-            con.Open();
 
-            SqlCommand cmd = new SqlCommand("Select Ad,Soyad,PatientMobilePhone from Patients where Ad=@name", con);
-            cmd.Parameters.AddWithValue("@name",mtxtHastaAdiAra.Text);
 
-            SqlDataReader da = cmd.ExecuteReader();
-            while(da.Read())
+            //SqlConnection con = new SqlConnection("Data Source=LAPTOP-RPPH3THU\\SQLEXPRESS;Initial Catalog=DentixtDb;Integrated Security=True");
+            //con.Open();
+
+            //SqlCommand cmd = new SqlCommand("Select Ad,Soyad,PatientMobilePhone from Patients where Ad=@name", con);
+            //cmd.Parameters.AddWithValue("@name",mtxtHastaAdiAra.Text);
+
+            //SqlDataReader da = cmd.ExecuteReader();
+            //while(da.Read())
+            //{
+            //    ListViewItem lvi = new ListViewItem();
+
+            //    lvi.Text = da.GetValue(0).ToString();
+            //    lvi.SubItems.Add(da.GetValue(1).ToString());
+            //    lvi.SubItems.Add(da.GetValue(2).ToString());
+
+            //    mlvHastalarMaliDurum.Items.Add(lvi);
+            //} 
+            #endregion
+
+            mlvHastalarMaliDurum.Items.Clear();
+            MyContext mc = new MyContext();
+            var people = mc.Patients.Where(x => x.Ad.Contains(param)).ToList();
+            foreach (var patient in people)
             {
                 ListViewItem lvi = new ListViewItem();
 
-                lvi.Text = da.GetValue(0).ToString();
-                lvi.SubItems.Add(da.GetValue(1).ToString());
-                lvi.SubItems.Add(da.GetValue(2).ToString());
-
+                lvi.Text = patient.Ad;
+                lvi.SubItems.Add(patient.Soyad);
+                lvi.SubItems.Add(patient.PatientMobilePhone);
+                lvi.Tag = patient.PatientId;
                 mlvHastalarMaliDurum.Items.Add(lvi);
+                //*********** YAPILACAKLAR ***********//
+                // Sadece hasta adı geliyor. subitemslar gelmiyor. o sorun çözülecek
             }
+
 
         }
         private void mtxtHastaAdiAra_TextChanged(object sender, EventArgs e)
         {
             GetList(mtxtHastaAdiAra.Text); 
+        }
+
+        private void MaliDurum_Load(object sender, EventArgs e)
+        {
+            //MyContext mc = new MyContext();
+            //var result = from p in mc.Patients
+            //             select new
+            //             {
+            //                 p.Ad,
+            //                 p.Soyad,
+            //                 p.PatientMobilePhone
+            //             };
+            //mlvHastalarMaliDurum.DataSource = result.ToList();
+            MyContext mc = new MyContext();
+            var list = mc.Patients.ToList();
+            foreach (var patient in list)
+            {
+                ListViewItem item = new ListViewItem(patient.Ad);
+                item.SubItems.Add(patient.Soyad);
+                item.SubItems.Add(patient.PatientMobilePhone);
+                mlvHastalarMaliDurum.Items.Add(item);
+
+            }
         }
     }
 }

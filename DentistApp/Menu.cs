@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DentistApp.Context;
 using MetroFramework;
 using MetroFramework.Forms;
 
@@ -25,7 +26,20 @@ namespace DentistApp
             this.patientsTableAdapter.Fill(this.dentixtDbDataSet.Patients);
             lblMenuTarih.Text = DateTime.Now.ToLongDateString();
             //menuPatientGrid.DataSource=
-                //dgvEmployees.DataSource = Form1.personeller.ToList().Select(x => new { x.Id,x.PersonelName, x.PersonelLastName, x.PersonelMail, x.PersonelPhone }).ToList();
+            //dgvEmployees.DataSource = Form1.personeller.ToList().Select(x => new { x.Id,x.PersonelName, x.PersonelLastName, x.PersonelMail, x.PersonelPhone }).ToList();
+
+            MyContext mc = new MyContext();
+            var result = from p in mc.Patients
+                         select new
+                         {
+                             p.Ad,
+                             p.Soyad,
+                             p.PatientMobilePhone
+                         };
+            menuPatientGrid.DataSource = result.ToList();
+
+
+
         }
 
         private void mtHastalar_Click(object sender, EventArgs e)

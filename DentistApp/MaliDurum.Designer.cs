@@ -99,18 +99,22 @@
             this.mlvHastalarMaliDurum.TabIndex = 3;
             this.mlvHastalarMaliDurum.UseCompatibleStateImageBehavior = false;
             this.mlvHastalarMaliDurum.UseSelectable = true;
+            this.mlvHastalarMaliDurum.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Ad";
+            this.columnHeader1.Width = 137;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Soyad";
+            this.columnHeader2.Width = 147;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Telefon Numarası";
+            this.columnHeader3.Width = 196;
             // 
             // MaliDurum
             // 
@@ -120,6 +124,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Name = "MaliDurum";
             this.Text = "MaliDurum";
+            this.Load += new System.EventHandler(this.MaliDurum_Load);
             this.metroPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
