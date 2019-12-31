@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
 using System.Data.SqlClient;
-using System.Data;
 using System.Configuration;
 using DentistApp.Context;
 
@@ -75,25 +74,28 @@ namespace DentistApp
                 //*********** YAPILACAKLAR ***********//
                 // Sadece hasta adı geliyor. subitemslar gelmiyor. o sorun çözülecek
             }
+            var a = people.Count;
+            //mlblToplamHasta.Text = a.ToString();
+
+            int hastasayisi = 0;
+            for (int i = 0; i <= a; i++)
+            {
+                hastasayisi = i;
+                mlblToplamHasta.Text = hastasayisi.ToString();
+            }
 
 
         }
         private void mtxtHastaAdiAra_TextChanged(object sender, EventArgs e)
         {
-            GetList(mtxtHastaAdiAra.Text); 
+            GetList(mtxtHastaAdiAra.Text);
         }
 
         private void MaliDurum_Load(object sender, EventArgs e)
         {
-            //MyContext mc = new MyContext();
-            //var result = from p in mc.Patients
-            //             select new
-            //             {
-            //                 p.Ad,
-            //                 p.Soyad,
-            //                 p.PatientMobilePhone
-            //             };
-            //mlvHastalarMaliDurum.DataSource = result.ToList();
+            //*********** YAPILACAKLAR ***********//
+            // 1- GetList metodunu burada da kullanacağım.
+
             MyContext mc = new MyContext();
             var list = mc.Patients.ToList();
             foreach (var patient in list)
@@ -103,6 +105,16 @@ namespace DentistApp
                 item.SubItems.Add(patient.PatientMobilePhone);
                 mlvHastalarMaliDurum.Items.Add(item);
 
+            }
+
+            var a = list.Count;
+            //mlblToplamHasta.Text = a.ToString();
+
+            int hastasayisi = 0;
+            for (int i = 0; i <= a; i++)
+            {
+                hastasayisi = i;
+                mlblToplamHasta.Text = hastasayisi.ToString();
             }
         }
     }

@@ -60,36 +60,52 @@ namespace DentistApp
             var result = from p in mc.Patients
                          select new
                          {
-                             Ad=p.Ad,
-                             Soyad=p.Soyad,
-                             Cinsiyet=p.Gender,
-                             Telefon=p.PatientMobilePhone,
-                             Mail=p.PatientEmail,
-                             TC=p.TcNo,
-                             Tedaviler=p.Treatments,
-                             KanGrubu=p.BloodType,
+                             Ad = p.Ad,
+                             Soyad = p.Soyad,
+                             Cinsiyet = p.Gender,
+                             Telefon = p.PatientMobilePhone,
+                             Mail = p.PatientEmail,
+                             TC = p.TcNo,
+                             Tedaviler = p.Treatments,
+                             KanGrubu = p.BloodType,
                          };
+            var a = result.ToList();
             hastalarGrid.DataSource = result.ToList();
+            int hastasayisi = 0;
+            for (int i = 0; i <= a.Count; i++)
+            {
+                hastasayisi = i;
+                mlblToplamHasta.Text = hastasayisi.ToString();
+            }
         }
 
         MyContext mc = new MyContext();
         void GetList(string param)
         {
-            //if (string.IsNullOrEmpty(txtHastaAra.Text))
-            //{
-            //    hastalarGrid.DataSource = null;
-            //}
-            //else
-            //{
-            //    var patient = mc.Patients.Where(x => x.Ad.Contains(param)).ToList();
-            //    foreach (var patient1 in patient)
-            //    {
-            //        hastalarGrid.DataSource
-            //    }
-            //}
-
-
-
+            //*********** YAPILACAKLAR ***********//
+            // 1- Datagride özgün toplam hasta sayını bir labelda yazdıracağım.
+            MyContext mc = new MyContext();
+            var result = from p in mc.Patients
+                         .Where(x => x.Ad.Contains(param))
+                         select new
+                         {
+                             Ad = p.Ad,
+                             Soyad = p.Soyad,
+                             Cinsiyet = p.Gender,
+                             Telefon = p.PatientMobilePhone,
+                             Mail = p.PatientEmail,
+                             TC = p.TcNo,
+                             Tedaviler = p.Treatments,
+                             KanGrubu = p.BloodType,
+                         };
+            var a = result.ToList();
+            hastalarGrid.DataSource = result.ToList();
+            int hastasayisi = 0;
+            for (int i = 0; i <= a.Count; i++)
+            {
+                hastasayisi = i;
+                mlblToplamHasta.Text = hastasayisi.ToString();
+            }
         }
 
         private void txtHastaAra_TextChanged(object sender, EventArgs e)

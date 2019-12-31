@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.mpMenu = new MetroFramework.Controls.MetroPanel();
             this.mtRandevuVer = new MetroFramework.Controls.MetroTile();
@@ -49,6 +49,7 @@
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.menuPatientGrid = new MetroFramework.Controls.MetroGrid();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,16 +59,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMenuTarih = new System.Windows.Forms.Label();
-            this.menuPatientGrid = new MetroFramework.Controls.MetroGrid();
             this.dentixtDbDataSet = new DentistApp.DentixtDbDataSet();
             this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientsTableAdapter = new DentistApp.DentixtDbDataSetTableAdapters.PatientsTableAdapter();
             this.mpMenu.SuspendLayout();
             this.metroPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuPatientGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.metroPanel3.SuspendLayout();
             this.metroPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuPatientGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentixtDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +91,7 @@
             this.mpMenu.HorizontalScrollbarHighlightOnWheel = false;
             this.mpMenu.HorizontalScrollbarSize = 12;
             this.mpMenu.Location = new System.Drawing.Point(0, 108);
-            this.mpMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mpMenu.Margin = new System.Windows.Forms.Padding(4);
             this.mpMenu.Name = "mpMenu";
             this.mpMenu.Size = new System.Drawing.Size(265, 672);
             this.mpMenu.TabIndex = 0;
@@ -105,7 +105,7 @@
             this.mtRandevuVer.ActiveControl = null;
             this.mtRandevuVer.BackColor = System.Drawing.Color.DarkOrange;
             this.mtRandevuVer.Location = new System.Drawing.Point(4, 592);
-            this.mtRandevuVer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtRandevuVer.Margin = new System.Windows.Forms.Padding(4);
             this.mtRandevuVer.Name = "mtRandevuVer";
             this.mtRandevuVer.Size = new System.Drawing.Size(253, 57);
             this.mtRandevuVer.TabIndex = 5;
@@ -120,7 +120,7 @@
             this.mtYeniHastaKaydi.ActiveControl = null;
             this.mtYeniHastaKaydi.BackColor = System.Drawing.Color.DarkOrange;
             this.mtYeniHastaKaydi.Location = new System.Drawing.Point(4, 528);
-            this.mtYeniHastaKaydi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtYeniHastaKaydi.Margin = new System.Windows.Forms.Padding(4);
             this.mtYeniHastaKaydi.Name = "mtYeniHastaKaydi";
             this.mtYeniHastaKaydi.Size = new System.Drawing.Size(253, 57);
             this.mtYeniHastaKaydi.TabIndex = 4;
@@ -135,7 +135,7 @@
             this.mtRandevular.ActiveControl = null;
             this.mtRandevular.BackColor = System.Drawing.Color.DarkOrange;
             this.mtRandevular.Location = new System.Drawing.Point(4, 415);
-            this.mtRandevular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtRandevular.Margin = new System.Windows.Forms.Padding(4);
             this.mtRandevular.Name = "mtRandevular";
             this.mtRandevular.Size = new System.Drawing.Size(253, 57);
             this.mtRandevular.TabIndex = 3;
@@ -150,7 +150,7 @@
             this.metroTile5.ActiveControl = null;
             this.metroTile5.BackColor = System.Drawing.Color.DarkOrange;
             this.metroTile5.Location = new System.Drawing.Point(4, 528);
-            this.metroTile5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTile5.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile5.Name = "metroTile5";
             this.metroTile5.Size = new System.Drawing.Size(253, 57);
             this.metroTile5.TabIndex = 2;
@@ -163,7 +163,7 @@
             this.mtStok.ActiveControl = null;
             this.mtStok.BackColor = System.Drawing.Color.DarkOrange;
             this.mtStok.Location = new System.Drawing.Point(4, 351);
-            this.mtStok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtStok.Margin = new System.Windows.Forms.Padding(4);
             this.mtStok.Name = "mtStok";
             this.mtStok.Size = new System.Drawing.Size(253, 57);
             this.mtStok.TabIndex = 2;
@@ -178,7 +178,7 @@
             this.metroTile4.ActiveControl = null;
             this.metroTile4.BackColor = System.Drawing.Color.DarkOrange;
             this.metroTile4.Location = new System.Drawing.Point(4, 415);
-            this.metroTile4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTile4.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile4.Name = "metroTile4";
             this.metroTile4.Size = new System.Drawing.Size(253, 57);
             this.metroTile4.TabIndex = 2;
@@ -191,7 +191,7 @@
             this.mtMaliDurum.ActiveControl = null;
             this.mtMaliDurum.BackColor = System.Drawing.Color.DarkOrange;
             this.mtMaliDurum.Location = new System.Drawing.Point(4, 287);
-            this.mtMaliDurum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtMaliDurum.Margin = new System.Windows.Forms.Padding(4);
             this.mtMaliDurum.Name = "mtMaliDurum";
             this.mtMaliDurum.Size = new System.Drawing.Size(253, 57);
             this.mtMaliDurum.TabIndex = 1;
@@ -206,7 +206,7 @@
             this.metroTile3.ActiveControl = null;
             this.metroTile3.BackColor = System.Drawing.Color.DarkOrange;
             this.metroTile3.Location = new System.Drawing.Point(4, 351);
-            this.metroTile3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTile3.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile3.Name = "metroTile3";
             this.metroTile3.Size = new System.Drawing.Size(253, 57);
             this.metroTile3.TabIndex = 2;
@@ -219,7 +219,7 @@
             this.mtHastalar.ActiveControl = null;
             this.mtHastalar.BackColor = System.Drawing.Color.DarkOrange;
             this.mtHastalar.Location = new System.Drawing.Point(4, 223);
-            this.mtHastalar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtHastalar.Margin = new System.Windows.Forms.Padding(4);
             this.mtHastalar.Name = "mtHastalar";
             this.mtHastalar.Size = new System.Drawing.Size(253, 57);
             this.mtHastalar.TabIndex = 0;
@@ -234,7 +234,7 @@
             this.metroTile2.ActiveControl = null;
             this.metroTile2.BackColor = System.Drawing.Color.DarkOrange;
             this.metroTile2.Location = new System.Drawing.Point(4, 287);
-            this.metroTile2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(253, 57);
             this.metroTile2.TabIndex = 2;
@@ -247,7 +247,7 @@
             this.metroTile1.ActiveControl = null;
             this.metroTile1.BackColor = System.Drawing.Color.DarkOrange;
             this.metroTile1.Location = new System.Drawing.Point(4, 223);
-            this.metroTile1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(4);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(253, 57);
             this.metroTile1.TabIndex = 2;
@@ -264,7 +264,7 @@
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 12;
             this.metroPanel2.Location = new System.Drawing.Point(276, 185);
-            this.metroPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(1089, 511);
             this.metroPanel2.TabIndex = 1;
@@ -272,6 +272,51 @@
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 13;
+            // 
+            // menuPatientGrid
+            // 
+            this.menuPatientGrid.AllowUserToResizeRows = false;
+            this.menuPatientGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.menuPatientGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.menuPatientGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.menuPatientGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.menuPatientGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.menuPatientGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.menuPatientGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.menuPatientGrid.EnableHeadersVisualStyles = false;
+            this.menuPatientGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.menuPatientGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.menuPatientGrid.Location = new System.Drawing.Point(13, 27);
+            this.menuPatientGrid.Name = "menuPatientGrid";
+            this.menuPatientGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.menuPatientGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.menuPatientGrid.RowHeadersWidth = 51;
+            this.menuPatientGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.menuPatientGrid.RowTemplate.Height = 24;
+            this.menuPatientGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.menuPatientGrid.Size = new System.Drawing.Size(1054, 474);
+            this.menuPatientGrid.TabIndex = 3;
             // 
             // metroGrid1
             // 
@@ -301,7 +346,7 @@
             this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.metroGrid1.Location = new System.Drawing.Point(5, 5);
-            this.metroGrid1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroGrid1.Margin = new System.Windows.Forms.Padding(4);
             this.metroGrid1.Name = "metroGrid1";
             this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -326,7 +371,7 @@
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 12;
             this.metroPanel3.Location = new System.Drawing.Point(276, 704);
-            this.metroPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.metroPanel3.Name = "metroPanel3";
             this.metroPanel3.Size = new System.Drawing.Size(1089, 55);
             this.metroPanel3.TabIndex = 2;
@@ -357,7 +402,7 @@
             this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel4.HorizontalScrollbarSize = 12;
             this.metroPanel4.Location = new System.Drawing.Point(276, 108);
-            this.metroPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.metroPanel4.Name = "metroPanel4";
             this.metroPanel4.Size = new System.Drawing.Size(1089, 69);
             this.metroPanel4.TabIndex = 3;
@@ -420,51 +465,6 @@
             this.lblMenuTarih.TabIndex = 4;
             this.lblMenuTarih.Text = "TARİH";
             // 
-            // menuPatientGrid
-            // 
-            this.menuPatientGrid.AllowUserToResizeRows = false;
-            this.menuPatientGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.menuPatientGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.menuPatientGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.menuPatientGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.menuPatientGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.menuPatientGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.menuPatientGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.menuPatientGrid.EnableHeadersVisualStyles = false;
-            this.menuPatientGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.menuPatientGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.menuPatientGrid.Location = new System.Drawing.Point(13, 27);
-            this.menuPatientGrid.Name = "menuPatientGrid";
-            this.menuPatientGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.menuPatientGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.menuPatientGrid.RowHeadersWidth = 51;
-            this.menuPatientGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.menuPatientGrid.RowTemplate.Height = 24;
-            this.menuPatientGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.menuPatientGrid.Size = new System.Drawing.Size(1054, 474);
-            this.menuPatientGrid.TabIndex = 3;
-            // 
             // dentixtDbDataSet
             // 
             this.dentixtDbDataSet.DataSetName = "DentixtDbDataSet";
@@ -491,7 +491,7 @@
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.mpMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu";
             this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Style = MetroFramework.MetroColorStyle.Lime;
@@ -500,12 +500,12 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mpMenu.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menuPatientGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuPatientGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentixtDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             this.ResumeLayout(false);
