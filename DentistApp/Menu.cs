@@ -74,8 +74,8 @@ namespace DentistApp
 
         private void mtRandevuVer_Click(object sender, EventArgs e)
         {
-            Randevular RandevularPage = new Randevular();
-            RandevularPage.ShowDialog();
+            RandevuVer RandevuVerPage = new RandevuVer();
+            RandevuVerPage.ShowDialog();
         }
 
         private void Menu_FormClosed(object sender, FormClosedEventArgs e)

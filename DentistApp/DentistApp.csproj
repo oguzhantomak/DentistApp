@@ -149,6 +149,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RandevuVer.resx">
+      <DependentUpon>RandevuVer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="YeniHastaKaydi.resx">
       <DependentUpon>YeniHastaKaydi.cs</DependentUpon>
     </EmbeddedResource>

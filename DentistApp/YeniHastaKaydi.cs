@@ -92,7 +92,7 @@ namespace DentistApp
             //patient.Notes = txtYeniHastaKayitNotlar.Text;   // Düzeltilecek
 
             bool result = ds.Add(patient);
-            MetroMessageBox.Show(this, result ? "Kayıt Başarıyla eklendi" : "Kayıt ekleme hatası", "Kayıet ekleme bildirimi", MessageBoxButtons.OK, result ? MessageBoxIcon.Hand : MessageBoxIcon.Error);
+            MetroMessageBox.Show(this, result ? "Kayıt Başarıyla eklendi" : "Kayıt ekleme hatası", "Kayıt ekleme bildirimi", MessageBoxButtons.OK, result ? MessageBoxIcon.Hand : MessageBoxIcon.Error);
 
 
 
