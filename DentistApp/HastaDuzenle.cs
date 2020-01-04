@@ -1,4 +1,5 @@
 ﻿using DentistApp.Context;
+using MetroFramework.Controls;
 using MetroFramework.Forms;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace DentistApp
             metroLabel9.Text = PatID.ToString(); // seçilen datanın id'si burada gözüküyor
 
             #region Seçilen Hastanın Bilgilerini Gösterme
+
             MyContext mc = new MyContext();
 
             var sorgu = mc.Patients.SingleOrDefault(x => x.PatientId == PatID);
@@ -40,11 +42,40 @@ namespace DentistApp
                 // kan grubu gelecek
             } 
             #endregion
+        }
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            MyContext mc = new MyContext();
+            var sonuc = from patient in mc.Patients
+                        where patient.PatientId==PatID
+                        select patient;
 
 
+            foreach (var item in sonuc)
+            {
+                item.Ad = txtAd.Text;
+                item.Soyad=txtSoyad.Text;
+                item.PatientEmail = txtMail.Text;
+                item.TcNo = txtTC.Text;
+                item.PatientMobilePhone = txtTelefon.Text;
+                item.PatientAddress = txtAdres.Text;
+            }
 
+            mc.SaveChanges();
+            Temizle();
 
+        }
 
+        public void Temizle()
+        {
+            foreach (Control item in this.Controls)
+            {
+                if (item is MetroTextBox)
+                {
+                    MetroTextBox tbox = (MetroTextBox)item;
+                    tbox.Clear();
+                }
+            }
         }
     }
 }

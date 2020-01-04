@@ -44,7 +44,7 @@
             this.txtKanGrubu = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.txtCinsiyet = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnGuncelle = new MetroFramework.Controls.MetroButton();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
@@ -360,14 +360,15 @@
             this.txtCinsiyet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCinsiyet.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroButton1
+            // btnGuncelle
             // 
-            this.metroButton1.Location = new System.Drawing.Point(179, 458);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(200, 44);
-            this.metroButton1.TabIndex = 8;
-            this.metroButton1.Text = "Güncelle";
-            this.metroButton1.UseSelectable = true;
+            this.btnGuncelle.Location = new System.Drawing.Point(179, 458);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(200, 44);
+            this.btnGuncelle.TabIndex = 8;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseSelectable = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // metroLabel9
             // 
@@ -384,7 +385,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 597);
             this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.txtCinsiyet);
             this.Controls.Add(this.txtKanGrubu);
             this.Controls.Add(this.txtAdres);
@@ -428,7 +429,7 @@
         private MetroFramework.Controls.MetroTextBox txtKanGrubu;
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroTextBox txtCinsiyet;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnGuncelle;
         private MetroFramework.Controls.MetroLabel metroLabel9;
     }
 }
