@@ -15,5 +15,6 @@ namespace DentistApp.Models
 
         public int PatientId { get; set; }
         public virtual Patient Patient { get; set; }
+        public string AppoitmentDetails { get; set; } // Details'i nvarchar(max) yerine text yapacağım
     }
 }

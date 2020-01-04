@@ -72,6 +72,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DentixtDbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HastaDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaDuzenle.Designer.cs">
+      <DependentUpon>HastaDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     <Compile Include="YeniHastaKaydi.Designer.cs">
       <DependentUpon>YeniHastaKaydi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="HastaDuzenle.resx">
+      <DependentUpon>HastaDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hastalar.resx">
       <DependentUpon>Hastalar.cs</DependentUpon>
     </EmbeddedResource>

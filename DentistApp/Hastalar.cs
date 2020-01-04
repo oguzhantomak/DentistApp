@@ -60,6 +60,7 @@ namespace DentistApp
             var result = from p in mc.Patients
                          select new
                          {
+                             ID = p.PatientId,
                              Ad = p.Ad,
                              Soyad = p.Soyad,
                              Cinsiyet = p.Gender,
@@ -70,8 +71,10 @@ namespace DentistApp
                              KanGrubu = p.BloodType,
                          };
             var a = result.ToList();
+
             hastalarGrid.DataSource = result.ToList();
             int hastasayisi = 0;
+            hastalarGrid.Columns["ID"].Visible = false;
             for (int i = 0; i <= a.Count; i++)
             {
                 hastasayisi = i;
@@ -82,13 +85,12 @@ namespace DentistApp
         MyContext mc = new MyContext();
         void GetList(string param)
         {
-            //*********** YAPILACAKLAR ***********//
-            // 1- Datagride özgün toplam hasta sayını bir labelda yazdıracağım.
             MyContext mc = new MyContext();
             var result = from p in mc.Patients
                          .Where(x => x.Ad.Contains(param))
                          select new
                          {
+                             ID=p.PatientId,
                              Ad = p.Ad,
                              Soyad = p.Soyad,
                              Cinsiyet = p.Gender,
@@ -97,7 +99,9 @@ namespace DentistApp
                              TC = p.TcNo,
                              Tedaviler = p.Treatments,
                              KanGrubu = p.BloodType,
+
                          };
+            
             var a = result.ToList();
             hastalarGrid.DataSource = result.ToList();
             int hastasayisi = 0;
@@ -111,6 +115,21 @@ namespace DentistApp
         private void txtHastaAra_TextChanged(object sender, EventArgs e)
         {
             GetList(txtHastaAra.Text);
+        }
+
+        
+        private void ctxDuzenle_Click(object sender, EventArgs e)
+        {
+            HastaDuzenle hastaDuzenle = new HastaDuzenle();
+            hastaDuzenle.PatID = Convert.ToInt32(hastalarGrid.SelectedRows[0].Cells["ID"].Value);
+
+            hastaDuzenle.ShowDialog();
+
+        }
+
+        private void ctxSil_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
