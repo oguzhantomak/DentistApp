@@ -362,7 +362,7 @@
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(179, 458);
+            this.btnGuncelle.Location = new System.Drawing.Point(196, 458);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(200, 44);
             this.btnGuncelle.TabIndex = 8;

@@ -129,6 +129,17 @@ namespace DentistApp
 
         private void ctxSil_Click(object sender, EventArgs e)
         {
+            int result = 0;
+
+            int idx = (int)hastalarGrid.SelectedRows[0].Cells["ID"].Value;
+
+            MyContext mc = new MyContext();
+            var person = mc.Patients.SingleOrDefault(x=>x.PatientId==idx);
+
+            mc.Patients.Remove(person);
+            mc.SaveChanges();
+            // Buraya listeyi yenilemek için bir getlist metodu getirelecek.
+
 
         }
     }

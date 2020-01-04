@@ -1,4 +1,5 @@
 ﻿using DentistApp.Context;
+using MetroFramework;
 using MetroFramework.Controls;
 using MetroFramework.Forms;
 using System;
@@ -46,12 +47,12 @@ namespace DentistApp
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             MyContext mc = new MyContext();
-            var sonuc = from patient in mc.Patients
+            var hasta = from patient in mc.Patients
                         where patient.PatientId==PatID
                         select patient;
 
 
-            foreach (var item in sonuc)
+            foreach (var item in hasta)
             {
                 item.Ad = txtAd.Text;
                 item.Soyad=txtSoyad.Text;
@@ -59,10 +60,14 @@ namespace DentistApp
                 item.TcNo = txtTC.Text;
                 item.PatientMobilePhone = txtTelefon.Text;
                 item.PatientAddress = txtAdres.Text;
+                // gender gelecek
+                // kan grubu gelicek
             }
+            MetroMessageBox.Show(this, "Güncelleme işlemi başarılı");
 
             mc.SaveChanges();
             Temizle();
+            this.Close();
 
         }
 
