@@ -80,7 +80,7 @@ namespace DentistApp
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            #region Takvimde seçili gün/ay/gün de var olan randevuları gösterme
+            #region Takvimde seçili gün/ay/yıl de var olan randevuları gösterme
             MyContext mc = new MyContext();
             var list = mc.Appoitments.ToList();
 
@@ -100,7 +100,15 @@ namespace DentistApp
                              Detay = a.AppoitmentDetails
                          };
             metroGrid2.DataSource = result.ToList(); 
+
+            /////////// Randevu Ver ekranı yüklendiğinde datagrid gelmiyor, randevu olmayan tarih seçildiğinde boş grid geliyor. Önce Load ekranında datagrid'i dolduracağım.
             #endregion
+        }
+
+        private void btnRandevuVer_Click(object sender, EventArgs e)
+        {
+            //*********** YAPILACAKLAR ***********//
+            // 1- Randevu ver butonuna tıklandığında en altta o güne ait 09:00 - 20:00 arasında yarım saatlik aralıklarla toplamda 23 tane buton olacak. Bu butonların içlerinde saatler yazıcak. Eğer bu butonların gün/ay/yıl- saatinde randevu varsa o butonlar tıklanamaz ve kırmızı arka planlı olacak. Eğer boş ise boş yazıcak ve tıklanabilir olacak. Eğer boş ise ve butona tıklanırsa bi form açılacak ve o formda seçilen gün/ay/yıl ve saate ait bilgiler labelda gösterilip "belirtilen tarihe randevu oluşturmak için hasta seçiniz yazısı gelicek" altında bir textbox olacak, textboxta arama yapıldığı anda altındaki datagridde hastalar listelenecek. form load olduğunda ise full dolu olarak datagrid gelecek. textboxta arama yapılıp hasta bulunduğunda, tek tık ve çift tık eventları çalışacak ve mbox açılacak. mboxda soru soracak " seçilen .... isimli hastaya .... tarihinde randevu oluşturmak istediğinize emin misiniz diyecek. Eğer evet seçilirse belirtilen tarihte belirtilen kişiye randevu oluşturulabilecek. Burada bir hastanın birden fazla appoitment id'si olabiliyor mu onu kontrol edeceğim. Eğer olmuyorsa databaseden onu düzelteceğim. Sanıyorum ki olabilir.
         }
     }
 }
