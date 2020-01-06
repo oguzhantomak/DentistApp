@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.SqlServer;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,8 @@ namespace DentistApp
         }
         private void randevuVerTarihSecici_DateSelected(object sender, DateRangeEventArgs e)
         {
+           
+
 
         }
 
@@ -54,14 +57,17 @@ namespace DentistApp
             ////////////////////////////////////
             ///
 
+            //var xa = mc.AppoitmentDate.ToString("t");
             var result = from p in mc.Patients
                          join a in mc.Appoitments
                          on p.PatientId equals a.PatientId
                          orderby a.AppoitmentDate
                          select new
+
                          {
                              //RandevuSaati=a.AppoitmentDate.ToString("HH:mm"),  ##### ToString metodu hata veriyor. Burada kullanamıyoruz. Nasıl kullanılacağını araştır.
                              RandevuSaati = a.AppoitmentDate,
+                             //RandevuSaati1 = a.AppoitmentDate.ToShortTimeString(),
                              HastaAdi = p.Ad,
                              HastaSoyadi = p.Soyad,
                              TelefonNumarası = p.PatientMobilePhone,
@@ -70,6 +76,31 @@ namespace DentistApp
             metroGrid1.DataSource = result.ToList();
 
 
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            #region Takvimde seçili gün/ay/gün de var olan randevuları gösterme
+            MyContext mc = new MyContext();
+            var list = mc.Appoitments.ToList();
+
+            var axx = monthCalendar1.SelectionRange.Start.Year;
+
+            var result = from p in mc.Patients
+                         join a in mc.Appoitments
+                         on p.PatientId equals a.PatientId
+                         where a.AppoitmentDate.Year == monthCalendar1.SelectionRange.Start.Year && a.AppoitmentDate.Month == monthCalendar1.SelectionRange.Start.Month && a.AppoitmentDate.Day == monthCalendar1.SelectionRange.Start.Day
+                         orderby a.AppoitmentDate
+                         select new
+                         {
+                             RandevuSaati = a.AppoitmentDate,
+                             HastaAdi = p.Ad,
+                             HastaSoyadi = p.Soyad,
+                             TelefonNumarası = p.PatientMobilePhone,
+                             Detay = a.AppoitmentDetails
+                         };
+            metroGrid2.DataSource = result.ToList(); 
+            #endregion
         }
     }
 }

@@ -69,6 +69,7 @@ namespace DentistApp
                              TC = p.TcNo,
                              Tedaviler = p.Treatments,
                              KanGrubu = p.BloodType,
+                             Adres = p.PatientAddress
                          };
             var a = result.ToList();
 
@@ -80,6 +81,8 @@ namespace DentistApp
                 hastasayisi = i;
                 mlblToplamHasta.Text = hastasayisi.ToString();
             }
+
+            // Load metodunu getlist metoduna uyarlayacağım.
         }
 
         MyContext mc = new MyContext();
@@ -99,6 +102,7 @@ namespace DentistApp
                              TC = p.TcNo,
                              Tedaviler = p.Treatments,
                              KanGrubu = p.BloodType,
+                             Adres = p.PatientAddress,
 
                          };
             
@@ -124,13 +128,12 @@ namespace DentistApp
             hastaDuzenle.PatID = Convert.ToInt32(hastalarGrid.SelectedRows[0].Cells["ID"].Value);
 
             hastaDuzenle.ShowDialog();
+            // Buraya listeyi yenilemek için bir getlist metodu getirelecek.
 
         }
 
         private void ctxSil_Click(object sender, EventArgs e)
         {
-            int result = 0;
-
             int idx = (int)hastalarGrid.SelectedRows[0].Cells["ID"].Value;
 
             MyContext mc = new MyContext();

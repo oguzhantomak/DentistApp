@@ -71,11 +71,8 @@ namespace DentistApp
                 lvi.SubItems.Add(patient.PatientMobilePhone);
                 lvi.Tag = patient.PatientId;
                 mlvHastalarMaliDurum.Items.Add(lvi);
-                //*********** YAPILACAKLAR ***********//
-                // Sadece hasta adı geliyor. subitemslar gelmiyor. o sorun çözülecek
             }
             var a = people.Count;
-            //mlblToplamHasta.Text = a.ToString();
 
             int hastasayisi = 0;
             for (int i = 0; i <= a; i++)
